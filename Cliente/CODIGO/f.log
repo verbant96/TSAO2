@@ -1,0 +1,2 @@
+Línea 36: la clase MSComctlLib.ListView del control lstGuildsList no era una clase de control cargada.
+Línea 185: la clase MSComctlLib.ListView del control lstMembers no era una clase de control cargada.
