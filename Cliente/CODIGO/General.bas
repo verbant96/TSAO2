@@ -457,7 +457,7 @@ Sub SetConnected()
     frmMain.ItemName.ForeColor = RGB(186, 179, 169)
     
     frmMain.rep.ForeColor = RGB(186, 179, 169)
-    frmMain.Exp.ForeColor = RGB(186, 179, 169)
+    frmMain.exp.ForeColor = RGB(186, 179, 169)
     
     frmMain.Visible = True
     Call DibujarPuntoMinimap
@@ -901,8 +901,7 @@ errorh:
 End Sub
 Public Function CurServerIp() As String
 
-  CurServerIp = "177.54.153.240"
-  'CurServerIp = "127.0.0.1"
+  CurServerIp = "127.0.0.1"
 
 End Function
 Public Function CurServerPort() As Integer
