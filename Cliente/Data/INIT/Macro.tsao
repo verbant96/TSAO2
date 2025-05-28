@@ -1,8 +1,8 @@
 [Macro]
-Tecla0=/meditar
+Tecla0=/mod exp 99999999999
 Tecla4=/regresar
 Tecla9=/ping
-Tecla1=/online
+Tecla1=/mata
 Tecla3=/curar
 Tecla2=/participar
 Tecla5=/dt

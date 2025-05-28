@@ -1,0 +1,32 @@
+27/5/2025 05:47:36 Error en EraseUserchar 9: El subíndice está fuera del intervalo. User: YAHAD(UI: 1 - CI: 0)
+27/5/2025 05:56:28 Error en EraseUserchar 9: El subíndice está fuera del intervalo. User: YAHAD(UI: 1 - CI: 0)
+27/5/2025 06:09:35 HandleData. CadOri:/mod hp 500000 Nom:YAHADUI:1 N: 6 D: Desbordamiento
+27/5/2025 06:09:57 HandleData. CadOri:/edit  Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:10:02 HandleData. CadOri:/edit lvl Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:10:08 HandleData. CadOri:/edit yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:30:00 HandleData. CadOri:/edit fuerza 50 Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:30:07 HandleData. CadOri:/edit mana Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:45:46 HandleData. CadOri:/edit yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:47:15 HandleData. CadOri:/dotorneo 5000 Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:47:23 HandleData. CadOri:/dotorneo yahad 500 Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:50:03 HandleData. CadOri:/HH yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:50:29 HandleData. CadOri:/iniaram yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:50:45 HandleData. CadOri:/inief yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:52:54 HandleData. CadOri:/sgct 50 Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:53:07 HandleData. CadOri:/sgct yahad Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 06:53:28 HandleData. CadOri:/dt yahad Nom:YAHADUI:1 N: 9 D: El subíndice está fuera del intervalo
+27/5/2025 07:07:01 HandleData. CadOri:/mod mp 50000 Nom:YAHADUI:1 N: 6 D: Desbordamiento
+27/5/2025 07:11:08 HandleData. CadOri:/dotorneo yahad 5000 Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 19:23:21 Error en EraseUserchar 9: El subíndice está fuera del intervalo. User: YAHAD(UI: 1 - CI: 0)
+27/5/2025 19:30:35 HandleData. CadOri:/mod aura 88} Nom:YAHADUI:1 N: 13 D: No coinciden los tipos
+27/5/2025 19:46:22 Error en EraseUserchar 9: El subíndice está fuera del intervalo. User: YAHAD(UI: 1 - CI: 0)
+27/5/2025 19:50:44 HandleData. CadOri:/acc 40000 Nom:YAHADUI:1 N: 9 D: El subíndice está fuera del intervalo
+27/5/2025 20:17:12 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:632
+27/5/2025 20:17:30 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:634
+27/5/2025 20:17:34 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:634
+27/5/2025 20:17:40 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:637
+27/5/2025 20:26:19 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:569
+27/5/2025 20:26:26 Mas de 60 iteraciones en SpawnNpc Mapa:123 Index:568
+27/5/2025 20:26:50 Llegó al nivel máximo: YAHAD
+27/5/2025 20:29:27 HandleData. CadOri:/racc yahad Nom:YAHADUI:1 N: 9 D: El subíndice está fuera del intervalo
+27/5/2025 20:48:39 Error en EraseUserchar 9: El subíndice está fuera del intervalo. User: YAHAD(UI: 1 - CI: 0)

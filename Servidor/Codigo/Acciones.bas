@@ -128,9 +128,9 @@ If InMapBounds(Map, X, Y) Then
                 Call Clickea_Cofre(Map, X, Y, userindex)
     End Select
     
-    ElseIf MapData(Map, X, Y).NpcIndex > 0 Then   'Acciones NPCs
+    ElseIf MapData(Map, X, Y).npcindex > 0 Then   'Acciones NPCs
         'Set the target NPC
-          UserList(userindex).flags.TargetNPC = MapData(Map, X, Y).NpcIndex
+          UserList(userindex).flags.TargetNPC = MapData(Map, X, Y).npcindex
         
         If Npclist(UserList(userindex).flags.TargetNPC).Comercia = 1 Then
             If Distancia(Npclist(UserList(userindex).flags.TargetNPC).Pos, UserList(userindex).Pos) > 6 Then
@@ -140,12 +140,12 @@ If InMapBounds(Map, X, Y) Then
             
             'Iniciamos la rutina pa' comerciar.
             Call IniciarCOmercioNPC(userindex)
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).Numero = 156 Or Npclist(MapData(Map, X, Y).NpcIndex).Numero = 157 Or Npclist(MapData(Map, X, Y).NpcIndex).Numero = 158 Or Npclist(UserList(userindex).flags.TargetNPC).Numero = 181 Or Npclist(UserList(userindex).flags.TargetNPC).Numero = 182 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).Numero = 156 Or Npclist(MapData(Map, X, Y).npcindex).Numero = 157 Or Npclist(MapData(Map, X, Y).npcindex).Numero = 158 Or Npclist(UserList(userindex).flags.TargetNPC).Numero = 181 Or Npclist(UserList(userindex).flags.TargetNPC).Numero = 182 Then
             If Npclist(UserList(userindex).flags.TargetNPC).DueñoMascota = userindex Then
                 Call SendData(SendTarget.toindex, userindex, 0, "AXELPT")
             End If
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.Viajero Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.Viajero Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||13")
                 Exit Sub
             Else
@@ -165,7 +165,7 @@ If InMapBounds(Map, X, Y) Then
                     End If
                     
             Call SendData(SendTarget.toindex, userindex, 0, "DAMEQUEST")
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.EntregaCajas Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.EntregaCajas Then
             If UserList(userindex).flags.Muerto = 1 Then
                     Call SendData(SendTarget.toindex, userindex, 0, "||3")
                 Exit Sub
@@ -186,7 +186,7 @@ If InMapBounds(Map, X, Y) Then
                 Exit Sub
             End If
             
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||13")
                 Exit Sub
             Else
@@ -219,21 +219,21 @@ If InMapBounds(Map, X, Y) Then
             
             
             
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.Correos Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.Correos Then
             If UserList(userindex).flags.Muerto = 1 Then
                     Call SendData(SendTarget.toindex, userindex, 0, "||3")
                 Exit Sub
             End If
         
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||13")
                 Exit Sub
             Else
                 correoIniciarForm userindex
             End If
 
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.BoveClan Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.BoveClan Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||10")
                 Exit Sub
             End If
@@ -262,8 +262,8 @@ If InMapBounds(Map, X, Y) Then
                 UserList(userindex).flags.CuentaBancaria = Guilds(UserList(userindex).GuildIndex).GuildName
                 Call BIniciarDeposito(userindex)
                 
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.QuintaJera Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.QuintaJera Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||10")
                 Exit Sub
             Else
@@ -285,10 +285,10 @@ If InMapBounds(Map, X, Y) Then
                 
                 
             End If
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.ShowCasas Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.ShowCasas Then
             Call SendData(SendTarget.toindex, userindex, 0, "MFC")
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.Banquero Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.Banquero Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||13")
                 Exit Sub
             End If
@@ -296,8 +296,8 @@ If InMapBounds(Map, X, Y) Then
             'A depositar de una
             SendUserBANK (userindex)
             SendData SendTarget.toindex, userindex, 0, "INITBANKO"
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.NpcDioses Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 3 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.NpcDioses Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 3 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||14")
                 Exit Sub
             End If
@@ -338,8 +338,8 @@ If InMapBounds(Map, X, Y) Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||646")
             End If
             
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.QuestNoble Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 3 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.QuestNoble Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 3 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||14")
                 Exit Sub
             End If
@@ -379,9 +379,9 @@ If InMapBounds(Map, X, Y) Then
             nobleza_etapaUno (UserList(userindex).flags.partyIndex)
         End If
         
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.NpcBargomaud Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.NpcBargomaud Then
         
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||14")
                 Exit Sub
             End If
@@ -396,17 +396,17 @@ If InMapBounds(Map, X, Y) Then
             Call SendData(SendTarget.toindex, userindex, 0, "||651@" & UserList(userindex).Name)
 
         
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.cirujano Then
-            If Distancia(Npclist(MapData(Map, X, Y).NpcIndex).Pos, UserList(userindex).Pos) > 5 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.cirujano Then
+            If Distancia(Npclist(MapData(Map, X, Y).npcindex).Pos, UserList(userindex).Pos) > 5 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||14")
                 Exit Sub
             End If
                 
                 SendData SendTarget.toindex, userindex, 0, "CIRUJA" & UserList(userindex).Raza & "," & UserList(userindex).Genero
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.Arenas Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.Arenas Then
             Call SendData(SendTarget.toindex, userindex, 0, "MAR" & NombreDueleando(1) & "," & NombreDueleando(2) & "," & NombreDueleando(3) & "," & NombreDueleando(4) & "," & NombreDueleando(5) & "," & NombreDueleando(6) & "," & NombreDueleando(7) & "," & NombreDueleando(8))
-        ElseIf Npclist(MapData(Map, X, Y).NpcIndex).NPCtype = eNPCType.Revividor Then
-            If Distancia(UserList(userindex).Pos, Npclist(MapData(Map, X, Y).NpcIndex).Pos) > 10 Then
+        ElseIf Npclist(MapData(Map, X, Y).npcindex).NPCtype = eNPCType.Revividor Then
+            If Distancia(UserList(userindex).Pos, Npclist(MapData(Map, X, Y).npcindex).Pos) > 10 Then
                 Call SendData(SendTarget.toindex, userindex, 0, "||12")
                 Exit Sub
             End If
@@ -465,8 +465,8 @@ If Y + 1 <= YMaxMapSize Then
                 FoundChar = 1
             End If
         End If
-        If MapData(Map, X, Y + 1).NpcIndex > 0 Then
-            TempCharIndex = MapData(Map, X, Y + 1).NpcIndex
+        If MapData(Map, X, Y + 1).npcindex > 0 Then
+            TempCharIndex = MapData(Map, X, Y + 1).npcindex
             FoundChar = 2
         End If
     End If
@@ -478,8 +478,8 @@ If Y + 1 <= YMaxMapSize Then
                 FoundChar = 1
             End If
         End If
-        If MapData(Map, X, Y).NpcIndex > 0 Then
-            TempCharIndex = MapData(Map, X, Y).NpcIndex
+        If MapData(Map, X, Y).npcindex > 0 Then
+            TempCharIndex = MapData(Map, X, Y).npcindex
             FoundChar = 2
         End If
         
